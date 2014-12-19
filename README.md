@@ -1,2 +1,32 @@
-canvas-container
-================
+# canvas-container
+
+This project defines an interface to manage a paged drawing surface.  The _page_ can be an html canvas, pdf, svg, etc.
+
+The need for this interface arises when rendering content onto a page.
+
+1. When there is overflow, or when a page break is indicated in the source, the renderer needs to signal the start of a new page.
+2. Links and anchors often need to be specified, for table of contents, index, and hyperlinks to both internal and external locations.
+3. Information for page, section, and container, such as title and author need to be indicated.
+
+Page numbers used as parameters are 1-based.
+
+## Access
+* page.getContainer
+
+## Metadata
+* setAttribute(pageNumber | page, name, value)
+* getAttribute(pageNumber | page, name)
+
+## Page Managment
+* addPage
+* deletePage (pageNumber | page)
+* insertPage (beforePageNumber | beforePage)
+* movePage (targetPage, beforePageNumber | beforePage)
+* deletePage (pageNumber | page)
+* getPages
+
+## Annotations (Links)
+* beginAnnotation(type, url)
+* endAnnotation
+* beginAnchor(name)
+* endAnchor
