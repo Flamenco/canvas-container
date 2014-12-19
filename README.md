@@ -12,21 +12,23 @@ Page numbers used as parameters are 1-based.
 
 ## Access
 * page.getContainer
+* page.setPageNumber(page, pageNumber)
+* page.getPageNumber : pageNumber
 
 ## Metadata
 * setAttribute(pageNumber | page, name, value)
-* getAttribute(pageNumber | page, name)
+* getAttribute(pageNumber | page, name) : value
 
 ## Page Managment
-* addPage
+* addPage : page
 * deletePage (pageNumber | page)
 * insertPage (beforePageNumber | beforePage)
 * movePage (targetPage, beforePageNumber | beforePage)
 * deletePage (pageNumber | page)
-* getPages
+* getPages : page[]
 
 ## Annotations (Links)
-* beginAnnotation(type, url)
-* endAnnotation
-* beginAnchor(name)
-* endAnchor
+* beginAnnotation(type, url) : context
+* endAnnotation(context)
+* beginAnchor(name) : context
+* endAnchor(context)
