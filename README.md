@@ -5,8 +5,8 @@ This project defines an interface to manage a paged drawing surface.  The _page_
 The need for this interface arises when rendering content onto a page.
 
 1. When there is overflow, or when a page break is indicated in the source, the renderer needs to signal the start of a new page.
-2. Links and anchors often need to be specified, for table of contents, index, and hyperlinks to both internal and external locations.
-3. Information for page, section, and container, such as title and author need to be indicated.
+2. Links and anchors often need to be specified, such as for a table of contents, index, and/or hyperlinks.  These links must navigate to both internal and external locations.
+3. Metadata for page, section, and container-name, such as title, author, chapter, and pageId need to be indicated.
 
 Page numbers used as parameters are 1-based.
 
